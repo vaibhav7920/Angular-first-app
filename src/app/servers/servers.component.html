@@ -1,9 +1,29 @@
-<button [disabled] ="!allowNewServer" class="btn btn-primary">Add server</button>
+
+
+
+
+
+
+<!-- TWO WAY DATA BINDING
+<label>Sever Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{serverName}}</p> -->
+
+
+
+
+<!-- PASSING DATA AND USING EVENT 
+<label>Sever Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p> -->
+
+<!-- EVENT BINDING
+<button [disabled] ="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+<p>{{serverCreationStaus}}</p> -->
+
 
 
 <app-server></app-server>
-
-
 <!-- <div app-server></div>    app server selector as an attribute  to render componet -->
 <!-- <div class="app-server"></div> app server selector as a class  to render componet -->
 
