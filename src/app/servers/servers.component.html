@@ -1,4 +1,33 @@
+<h1>DIRECTIVES</h1>
+<label>Sever Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button [disabled] ="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+<p *ngIf="serverCreated">The Server was created, servername is{{serverName}}</p>
+<app-server *ngFor="let server of servers"></app-server>
 
+
+<!-- <label>Sever Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button [disabled] ="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+<p *ngIf="serverCreated; else noServer">The Server was created, servername is{{serverName}}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template> -->
+
+
+<!-- <label>Sever Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button [disabled] ="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+<p *ngIf="serverCreated">The Server was created, servername is{{serverName}}</p> -->
+
+
+
+
+<!-- <p>COMBINING ALL TYPES OF DATA BINDING</p>
+<label>Sever Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button [disabled] ="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+<p>{{serverCreationStaus}}</p> -->
 
 
 
@@ -22,8 +51,8 @@
 <p>{{serverCreationStaus}}</p> -->
 
 
-
-<app-server></app-server>
+<!--  
+<app-server></app-server>  app server selector as a tag  to render componet-->
 <!-- <div app-server></div>    app server selector as an attribute  to render componet -->
 <!-- <div class="app-server"></div> app server selector as a class  to render componet -->
 
