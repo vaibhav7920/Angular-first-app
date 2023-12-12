@@ -57,5 +57,8 @@ let student :any; // any is the default type
  }
 
 
+/*  TYPE INFERENCE */ 
 
- 
+let course ="Maths"; // we can initallize the variable without telling the datatype
+
+//course=23;  // this line will throw error because typeScript implicitly assigns string type at the time of initialization to course
